@@ -8,14 +8,14 @@ package View;
  *
  * @author Administrator
  */
-public class UpdateAdmin extends javax.swing.JFrame {
+public class ManageAdmins extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(UpdateAdmin.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(ManageAdmins.class.getName());
 
     /**
      * Creates new form UpdateAdmin
      */
-    public UpdateAdmin() {
+    public ManageAdmins() {
         initComponents();
     }
 
@@ -31,53 +31,53 @@ public class UpdateAdmin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextFieldAdminName = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jPasswordFieldAdminPass = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        btnAddAdmin = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(102, 204, 0));
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
-        jLabel1.setText("UPDATE ADMIN");
+        jLabel1.setText("MANAGE ADMINS");
 
-        jTextField1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldAdminName.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jTextFieldAdminName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextFieldAdminNameActionPerformed(evt);
             }
         });
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
-        jLabel2.setText("PROD ID");
+        jLabel2.setText("NAME");
 
-        jTextField2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jPasswordFieldAdminPass.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jPasswordFieldAdminPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jPasswordFieldAdminPassActionPerformed(evt);
             }
         });
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
-        jLabel3.setText("NAME");
+        jLabel3.setText("PASSWORD");
 
-        jButton9.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
-        jButton9.setText("ADD");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        btnAddAdmin.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
+        btnAddAdmin.setText("ADD");
+        btnAddAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                btnAddAdminActionPerformed(evt);
             }
         });
 
-        jButton10.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
-        jButton10.setText("CLEAR");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
+        btnBack.setText("BACK");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
@@ -97,13 +97,13 @@ public class UpdateAdmin extends javax.swing.JFrame {
                             .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPasswordFieldAdminPass, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldAdminName, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(63, 63, 63)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnAddAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(100, 100, 100)
-                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(123, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -114,15 +114,15 @@ public class UpdateAdmin extends javax.swing.JFrame {
                 .addGap(62, 62, 62)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldAdminName, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPasswordFieldAdminPass, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnAddAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(73, Short.MAX_VALUE))
         );
 
@@ -151,21 +151,37 @@ public class UpdateAdmin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextFieldAdminNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAdminNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jTextFieldAdminNameActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jPasswordFieldAdminPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldAdminPassActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_jPasswordFieldAdminPassActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    private void btnAddAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddAdminActionPerformed
+    String user = jTextFieldAdminName.getText();
+    String pass = jTextFieldAdminPass.getText();
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+    if(user.isEmpty() || pass.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please fill all fields");
+    } else {
+        // Create the Model object and add to the list in Login class
+        Model.Admin newAdmin = new Model.Admin(user, pass);
+        View.Login.adminList.add(newAdmin);
+        
+        JOptionPane.showMessageDialog(this, "New Admin Registered!");
+        
+        // Clear fields
+        jTextFieldAdminName.setText("");
+        jTextFieldAdminPass.setText("");
+    }  // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddAdminActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+    new AdminDashboard().setVisible(true);
+    this.dispose();  // TODO add your handling code here:
+    }//GEN-LAST:event_btnBackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,18 +205,18 @@ public class UpdateAdmin extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new UpdateAdmin().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new ManageAdmins().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton btnAddAdmin;
+    private javax.swing.JButton btnBack;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jPasswordFieldAdminPass;
+    private javax.swing.JTextField jTextFieldAdminName;
     // End of variables declaration//GEN-END:variables
 }

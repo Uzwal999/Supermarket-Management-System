@@ -4,6 +4,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Administrator
@@ -11,7 +13,12 @@ package View;
 public class Login extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Login.class.getName());
+    public static java.util.ArrayList<Model.Admin> adminList = new java.util.ArrayList<>();
 
+    // Static block to add the first 'Super Admin' automatically
+    static {
+        adminList.add(new Model.Admin("admin", "admin123"));
+    }
     /**
      * Creates new form Login
      */
@@ -258,25 +265,35 @@ public class Login extends javax.swing.JFrame {
     }
 
     // 2. Admin Login Logic
-    if (role.equals("Admin")) {
-        if (username.equals("admin") && password.equals("admin123")) {
-            // Success: Open the Selection Dashboard for the Admin
-            new AdminDashboard().setVisible(true);
-            this.dispose(); 
-        } else {
-            javax.swing.JOptionPane.showMessageDialog(this, "Invalid Admin Credentials");
+if (role.equals("Admin")) {
+    boolean loginSuccessful = false;
+    
+    // Loop through the list to see if the username/password matches
+    for (Model.Admin a : adminList) {
+        if (a.getUsername().equals(username) && a.getPassword().equals(password)) {
+            loginSuccessful = true;
+            break;
         }
-    } 
+    }
+
+    if (loginSuccessful) {
+        new AdminDashboard().setVisible(true);
+        this.dispose();
+    } else {
+        JOptionPane.showMessageDialog(this, "Invalid Admin Credentials");
+    }
+}
     
     // 3. Seller Login Logic
-    else if (role.equals("Seller")) {
+else if (role.equals("Seller")) {
         // Checking against the hardcoded default OR your Seller ArrayList
-        if (username.equals("seller") && password.equals("seller123")) {
-            new Seller().setVisible(true);
-            this.dispose();
-        } else {
-            javax.swing.JOptionPane.showMessageDialog(this, "Invalid Seller Credentials");
-        }
+    if (username.equals("seller") && password.equals("seller123")) {
+        // Direct redirect to the full Products management page
+        new Products().setVisible(true); 
+        this.dispose();
+    } else {
+        JOptionPane.showMessageDialog(this, "Invalid Seller Credentials");
+    }
     }
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
