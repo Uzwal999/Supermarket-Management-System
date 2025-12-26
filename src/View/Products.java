@@ -16,7 +16,7 @@ public class Products extends javax.swing.JFrame {
   private DefaultTableModel model;
 
     /**
-     * Creates new form Products
+     * Creates new form Products git ko lagi halka chanes
      */
     public Products() {
     initComponents();
